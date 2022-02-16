@@ -1,0 +1,2 @@
+# aprendizados da semana
+Essa foi uma semana de muito aprendizado, aprendemos a usar o Slack e o Zoom, ouvimos sobre convivência e Diversidade. Tivemos aula de Termina e Git, e por fim aprendemos a utilizar o VScode.
