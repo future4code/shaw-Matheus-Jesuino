@@ -19,7 +19,6 @@
 
 // // EXERCÍCIO 01
 // function calculaAreaRetangulo() {
-
 // let alt = Number (prompt ("Diga uma altura !"))
 // let lar =Number ( prompt ("Diga uma largura !"))
 // let resultado = alt * lar 
@@ -42,22 +41,13 @@
 // EXERCÍCIO 03
 // function calculaIMC(peso, altura) {
 //   return peso / (altura * altura)
-
 // }
-// console.log(calcularIMC (85 * 1,8 ));
 
 
 
 
-function imprimeInformacoesUsuario() {
-  let nome = prompt("Qual seu nome ?")
-  let idade = prompt("Qual a sua idade ?")
-  let email = prompt("Qual seu email ?")
 
-  console.log(`Meu nome é  ${nome} , tenho  ${idade} anos, e o meu email é ${email}`)
-}
 
-// //   console.log("Meu nome é " + nome + ", tenho " + idade + " anos" + ", e o meu email é " + email)
 
 
 
