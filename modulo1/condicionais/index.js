@@ -98,44 +98,44 @@
 //     Se sim, imprima no console `"Você pode dirigir"`, 
 //     caso contrário, imprima `"Você não pode dirigir."`
 
-const habilitação = Number(prompt("Qual a sua idade ? "))
+// const habilitação = Number(prompt("Qual a sua idade ? "))
 
-if (habilitação > 17) {
-    console.log("Você pode dirigir")
-} else {
-    console.log("Você não pode dirrigir");
-}
+// if (habilitação > 17) {
+//     console.log("Você pode dirigir")
+// } else {
+//     console.log("Você não pode dirrigir");
+// }
 
 // Agora faça um programa que verifica que turno do dia um aluno estuda. Peça para digitar 
 // M (matutino) ou V (Vespertino) ou N (Noturno). 
 // Imprima no console a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!". Utilize o bloco if/else
 
-let turno = prompt("Diga em qual turno você estuda, apenas com M, V ,ou N")
+// let turno = prompt("Diga em qual turno você estuda, apenas com M, V ,ou N")
 
-if (turno === "M") {
-    console.log("Bom Dia !!!");
-} else if (turno === "V") {
-    console.log("Boa Tarde!!!");
-} else {
-    console.log("Boa Noite!!!")
-}
+// if (turno === "M") {
+//     console.log("Bom Dia !!!");
+// } else if (turno === "V") {
+//     console.log("Boa Tarde!!!");
+// } else {
+//     console.log("Boa Noite!!!")
+// }
 
 //4 - Repita o exercício anterior, mas utilizando a estrutura de switch case agora.
 
 
-let turno2 = prompt("Diga em qual turno você estuda, apenas com M, V ,ou N")
+// let turno2 = prompt("Diga em qual turno você estuda, apenas com M, V ,ou N")
 
-switch (turno2) {
-    case "M":
-        console.log("Bom Dia !!!");
-        break;
-    case "V":
-        console.log("Boa Tarde!!!");
-        break;
-    default:
-        console.log("Boa Noite!!!");
-        break;
-}
+// switch (turno2) {
+//     case "M":
+//         console.log("Bom Dia !!!");
+//         break;
+//     case "V":
+//         console.log("Boa Tarde!!!");
+//         break;
+//     default:
+//         console.log("Boa Noite!!!");
+//         break;
+// }
 
 
 
@@ -145,15 +145,26 @@ switch (turno2) {
 // do ingresso, então verifique se seu amigo ou amiga vai topar assistir o filme.
 // Caso positivo, imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
 
-function cinema() {
+// function cinema() {
 
-    const generoFilme = prompt("Qual o genero do filme")
-    const valorIngresso = Number(prompt("Qual o valor do engresso?"))
+//     const generoFilme = prompt("Qual o genero do filme")
+//     const valorIngresso = Number(prompt("Qual o valor do engresso?"))
 
-    if (generoFilme === "fantasia" && valorIngresso <= 15) {
-        console.log("Bom Filme!!!");
-    } else {
-        console.log("Escolha outro filme :(");
-    }
+//     if (generoFilme === "fantasia" && valorIngresso <= 15) {
+//         console.log("Bom Filme!!!");
+//     } else {
+//         console.log("Escolha outro filme :(");
+//     }
+// }
+// cinema()
+
+
+let soma = 0
+let numero = Number (prompt("Digite um numero"))
+console.log(`O Primeiro numero digitado é ${numero}`)
+
+while (numero !==0) {
+    soma = soma + numero
+    numero = Number (prompt("Digite o outro numeor"))
 }
-cinema()
+console.log(`A soma é : ${soma}`)
