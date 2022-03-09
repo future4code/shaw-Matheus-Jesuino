@@ -1,0 +1,110 @@
+.titulo {
+   color:#b40606;
+   display: flex;
+ justify-content: center;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.titulo2{
+    color:#b40606;
+   display: flex;
+ justify-content: center;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 50px;
+}
+
+.sobretitulo{
+    color: #b40606;
+    display: flex;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+    background-color: #BEBEBE;
+    text-decoration: none;
+}
+header {
+    background-color: #D3D3D3;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 5px 5px 4px;
+    font-size: 18px;
+    color: #696969;
+    background-color: #D3D3D3;
+}
+.menu1 {
+    color:  #b40606;
+    
+}
+.menu2 {
+    color: #b40606;
+    
+}
+
+.menu3 {
+    color:  #b40606;
+}
+
+.menu4 {
+    color:  #b40606;
+    
+}
+.sobrenos {
+    display: flex;
+    justify-content: center;
+    height: 390px;
+}
+.rodape {
+    display: flex;
+    justify-content: center;
+}
+.rodape2 {
+    display: flex;
+    justify-content: center; 
+}
+.estoque {
+    color:#b40606;
+    display: flex;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.tabela {
+    display: flex;
+    justify-content: space-around;
+}
+table {
+    margin: 40px 20px 15px 10px;
+}
+h2 {
+    margin-left: 10px;
+}
+.formulario {
+    margin-left: 10px;
+}
+.form-add {
+    margin: 16px 0px 0px 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+.caixa {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+}
+.texto {
+margin-left: 15px;
+}
+.colaboradores{
+display: flex;
+justify-content: center;
+font-style: oblique;
+font-size: 36px;
+}
+.lista {
+    display: flex;
+justify-content:space-around;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 24px;
+}
