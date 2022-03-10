@@ -99,6 +99,8 @@ div:last-child {
 
 table {
     width: 60%;
+   text-align: center;
+   margin: 50px auto;
 }
 
 td button {
@@ -131,3 +133,4 @@ td button {
 .container {
     padding-top: 10px;
 }
+
