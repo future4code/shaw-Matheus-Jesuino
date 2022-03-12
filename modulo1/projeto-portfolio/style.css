@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+header{
+    width: 100%;
+    height: 110px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+   
+}
+body {
+    background-color: white;
+}
+
+.logomarca {
+    width: 99px ;
+    height: 85px;
+    margin-top: 5px;
+    margin-left: 25px;
+    padding: 10px;
+   margin: 1px 900px -20px 20px;
+  
+}
+.seta1 {
+    width: 60px ;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: -200px;
+    padding: 10px;
+    margin-right: 160px;
+}
+.seta2 {
+    width: 60px ;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: -100px;
+    padding: 10px;
+    margin-right: 160px;
+}
+.seta3{
+    width: 60px ;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: -200px;
+    padding: 10px;
+    margin-right: 160px;  
+}
