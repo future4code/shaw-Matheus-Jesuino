@@ -254,16 +254,61 @@ const avisoAosAtrasados = (lista) => {
 // console.log(loginDesafio());
 
 // const primeiraDoseDesafio = () => {
-//     //  Sua lógica aqui
+//   const usuarios = [];
+
+//   const usuario = {
+//     nome: nome,
+//     anoDeNascimento: anoDeNascimento,
+//     senha: senha,
+//     nacionalidade: nacionalidade,
+//     vacina: vacina,
+//     imunizacao: "incompleta"
+//   }
+
+//   usuarios.push(usuario)
+
+//   console.log(usuarios)
+
+//   data.setDate(data.getDate() + tempo)
+
+//   const dataFormatada = data.toLocaleDateString()
+
+//   return `Olá ${nome}! A próxima dose da ${vacina} é daqui a ${tempo} dias.
+//   Compareça no posto na data ${dataFormatada}.`
+// };
+// console.log(primeiraDose());
 // }
 // console.log(primeiraDoseDesafio())
-// const segundaDoseDesafio = (nomeDoUsuario) => {
-//     //  Sua lógica aqui
-// }
-// console.log(segundaDoseDesafio("ALGUM NOME AQUI"));
+// const segundaDose = (pessoaVacinada) => {
+//   const usuarios = [
+//     { nome: "Artur", imunizacao: "incompleta" },
+//     { nome: "Barbara", imunizacao: "incompleta" },
+//     { nome: "Carlos", imunizacao: "incompleta" }
+//   ];
 
-// const avisoAosAtrasadosDesafio = () => {
-//     //  Sua lógica aqui
+//   for (let usuario of usuarios) {
+//     if (usuario.nome === pessoaVacinada) {
+//       usuario.imunizacao = "completa"
+//     }
+//   }
 
-}    
-//  console.log(avisoAosAtrasadosDesafio())
+//   return usuarios
+// };
+// console.log(segundaDose("Artur"));
+    
+// const avisoAosAtrasados = () => {
+//   const usuarios = [
+//     { nome: "Artur", imunizacao: "incompleta" },
+//     { nome: "Barbara", imunizacao: "completa" },
+//     { nome: "Carlos", imunizacao: "incompleta" }
+//   ];
+
+//    for (let i = 0; i < usuarios.length; i++) {
+//     const usuario = usuarios[i]
+//     if (usuario.imunizacao === "incompleta") {
+//       console.log(`Olá ${usuario.nome}! Sua imunização está ${usuario.imunizacao},
+//       por favor volte ao postinho para tomar a segunda dose.`)
+//     }
+//   }
+// };
+// console.log(avisoAosAtrasados());
