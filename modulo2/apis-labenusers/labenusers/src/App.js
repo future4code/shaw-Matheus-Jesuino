@@ -1,74 +1,110 @@
+
 import axios from "axios";
 import React from "react";
+import InputsCadastro from "./components/InputsCadastro/InputsCadastro";
+import ListaUsuarios from "./components/ListaUsuarios/ListaUsuarios";
+import { Button } from "./style";
 
-
-
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
-    user: [],
-    nome: "",
-    email: "",
+    pagina: 1,
+    nomeInput: "",
+    emailInput: ""
   };
-  componentDidMount() {
-   
-    this.getAllUsers();
-  }
-  criarUser = () => {
 
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
-    const body = {
-      name: this.state.nome,
-      email: this.state.email
+  renderizaPagina = () => {
+    switch (this.state.pagina) {
+      case 1:
+        return (
+          <InputsCadastro
+            nomeValue={this.state.nomeInput}
+            onChangeNome={this.onChangeNome}
+            emailValue={this.state.emailInput}
+            onChangeEmail={this.onChangeEmail}
+            onClickCadastrar={this.cadastrarUsuario}
+          />
+        );
+      case 2:
+        return <ListaUsuarios />;
+      default:
+        return (
+          <InputsCadastro
+            nomeValue={this.state.nomeInput}
+            onChangeNome={this.onChangeNome}
+            emailValue={this.state.emailInput}
+            onChangeEmail={this.onChangeEmail}
+            onClickCadastrar={this.cadastrarUsuario}
+          />
+        );
     }
+  };
 
-    const headers= {
-      headers:{
-        Authorization: "Matheus-Jesuino-Shaw"
-      },
-    }
-
-    axios.post(url, body, headers) 
-    
-    .then((res) => {
-      this.getAllUsers
-      alert(res.data.message)
+  proximaPagina = () => {
+    if (this.state.pagina === 1) {
       this.setState({
-        nome:"",
-        email:"",
+        pagina: this.state.pagina + 1
+      });
+    } else {
+      this.setState({
+        pagina: this.state.pagina - 1
+      });
+    }
+  };
+
+  onChangeNome = (event) => {
+    this.setState({
+      nomeInput: event.target.value
+    });
+  };
+
+  onChangeEmail = (event) => {
+    this.setState({
+      emailInput: event.target.value
+    });
+  };
+
+  cadastrarUsuario = () => {
+    const body = {
+      name: this.state.nomeInput,
+      email: this.state.emailInput
+    };
+
+    const url =
+      "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
+
+    const headers = {
+      headers: {
+        Authorization: "Matheus-Jesuino-Shaw"
+      }
+    };
+    axios
+      .post(url, body, headers)
+      .then((res) => {
+        alert(`Usuário ${body.name} criado com sucesso!`);
+        this.setState({
+          nomeInput: "",
+          emailInput: ""
+        });
+        console.log(res);
       })
-    }).catch((err) => {
-     
-      alert(err.message);
-    })
-  }
-
-  onChangeNome = (ev) => {
-    this.setState({ nome: ev.target.value })
+      .catch((err) => {
+        console.log(err.response.data.message);
+        alert(err.response.data.message);
+      });
   };
 
-  onChangeEmail = (ev) => {
-    this.setState({ email: ev.target.value })
-  };
-
-  render () {
-    const renderUser = this.state.user.map((usuario) => {
-      return <li key={user.id}>{user.nome}</li>
-    })
+  render() {
     return (
-      <div >
-        <button>Proxima Tela </button>
-        <h2>Preencha suas informações</h2>
-        <input placeholder="Nome"
-          value={this.state.nome}
-          onChange={this.onChangeNome}
-        />
-        <br />
-        <input placeholder="Email"
-          value={this.state.email}
-          onChange={this.onChangeEmail}
-        />
-        <button onClick={this.criarUser}> Adicionar Usuario </button>
+      <div>
+        {this.state.pagina === 1 ? (
+          <Button onClick={this.proximaPagina}>Lista de usuários</Button>
+        ) : (
+          <Button onClick={this.proximaPagina}>Voltar para cadastro</Button>
+        )}
+        {this.renderizaPagina()}
       </div>
     );
   }
-  }
+}
+
+export default App;
