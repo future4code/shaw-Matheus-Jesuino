@@ -2,6 +2,7 @@
 // COMPARADORES
 // Exercício 1------------------------------------------------------------------------------------
 
+
 // // a-)Comparador de desigualdade a!==b 
 // // Exemplo:
 
@@ -37,6 +38,43 @@
 // // c-) 'a'==='b'= false
 // // d-) 'b'>'a'= false
 // // e-) 0!==null= true
+
+// a-)Comparador de desigualdade a!==b 
+// Exemplo:
+
+// function checarDesigualdade(a, b) {
+
+//     return `No comparador de desigualdade ${a}!==${b} é ${a !== b}`
+// }
+// console.log(checarDesigualdade(1, 3));
+
+// // b-)Compare a igualdade entre a===b
+
+// function checarIgualdade(a, b) {
+
+//     return `No Comparador de igualdade ${a} === ${b} é ${a === b}`
+// }
+// console.log(checarIgualdade(1, 2));
+
+// // c-)Faça uma função chamada "verificaSeEMaior"
+// function verificaSeEMaior(a, b) {
+
+//     return a > b
+// }
+
+// console.log(verificaSeEMaior(321, 2156));
+
+
+// Exercício 2------------------------------------------------------------------------------------
+//Escreva true or false para as comparações abaixo:
+
+// exemplo 1>2 = false
+// a-) 1==='1'= false
+// b-) 1=='1'= true
+// c-) 'a'==='b'= false
+// d-) 'b'>'a'= false
+// e-) 0!==null= true
+
 
 
 // // CONDICIONAIS
@@ -86,6 +124,7 @@
 
 // console.log(login());
 
+
 const usuários = [
     {
         nome: "Artur",
@@ -112,6 +151,34 @@ const usuários = [
         imunizacao: "incompleta"
     }
     ]
+
+// const usuarios = [
+//     {
+//         nome: "Artur",
+//         ano: 2000,
+//         nacionalidae: "brasileiro",
+//         senha: "123456",
+//         vacina: "pfizer",
+//         imunizacao: "incompleta"
+//     },
+//     {
+//         nome: "Bárbara",
+//         ano: 1984,
+//         nacionalidae: "brasileira",
+//         senha: "labenu",
+//         vacina: "astrazenica",
+//         imunizacao: "completa"
+//     },
+//     {
+//         nome: "Carlos",
+//         ano: 1999,
+//         nacionalidae: "brasileiro",
+//         senha: "123456",
+//         vacina: "coronavac",
+//         imunizacao: "incompleta"
+//     }
+// ]
+
 
 //         if (usuários.senha = "labenu") {
 //         console.log("Usuário Logado");
@@ -167,6 +234,7 @@ const usuários = [
 // console.log(segundaDose("Barbara"));
 
 // Exercício 7 --------------------------------------------------------------------------------------
+
 const usuarios = [
     { nome: "Artur", imunizacao: "incompleta" },
     { nome: "Barbara", imunizacao: "completa" },
@@ -210,6 +278,51 @@ const avisoAosAtrasados = (lista) => {
 //         }
 
 //     ]
+
+// const usuarios = [
+//     { nome: "Artur", imunizacao: "incompleta" },
+//     { nome: "Barbara", imunizacao: "completa" },
+//     { nome: "Carlos", imunizacao: "incompleta" },
+// ]
+// const avisoAosAtrasados = (lista) => {
+//     for (let i = 0; i < usuarios.length; i++) {
+//         if (usuarios[i].imunizacao == "incompleto") {
+//             console.log(`Olá ${usuarios[i].nome} Sua imunização está ${usuarios[i].imunizacao}, por favor volte ao postinho para tomar a segunda dose.`);
+//         }
+//         return lista
+//     }
+//     console.log(avisoAosAtrasados())
+
+// DESAFIO------------------------------------------------------------------------------------------
+
+// const usuarios = [
+//     {
+//         nome: "Artur",
+//         ano: 2000,
+//         nacionalidae: "brasileiro",
+//         senha: "123456",
+//         vacina: "pfizer",
+//         imunizacao: "incompleta"
+//     },
+//     {
+//         nome: "Bárbara",
+//         ano: 1984,
+//         nacionalidae: "brasileira",
+//         senha: "labenu",
+//         vacina: "astrazenica",
+//         imunizacao: "completa"
+//     },
+//     {
+//         nome: "Carlos",
+//         ano: 2000,
+//         nacionalidae: "brasileiro",
+//         senha: "123456",
+//         vacina: "coronavac",
+//         imunizacao: "incompleta"
+//     }
+
+// ]
+
 //     let nome = prompt("Qual seu nome?")
 //     let senha = prompt("Digite sua senha")
 
@@ -224,6 +337,7 @@ const avisoAosAtrasados = (lista) => {
 //         }
 
 //         console.log(cadastroDesafio(nome, senha));
+
 
 // const loginDesafio = () => {  
 //     let nomeDoUsuario = prompt("Qual seu nome ?")
@@ -312,3 +426,73 @@ const avisoAosAtrasados = (lista) => {
 //   }
 // };
 // console.log(avisoAosAtrasados());
+
+// let senha1 = prompt("Qual sua senha?")
+// const loginDesafio = () => {  
+//     for (let i = 0; i < usuarios.length; i++) {
+//         if (usuarios[1].senha === senha1) {
+//             console.log(`usuario ${usuarios[i].nome} logado`);
+//         } else {
+//             console.log(`Usuario não encontrado`);
+// }
+//     }
+// }
+// console.log(loginDesafio());
+
+
+// const primeiraDoseDesafio = () => {
+    
+//     for(let i = 0;i<usuarios.length;i++){
+//         if(usuarios[i].imunizacao === `completa` ){
+//            usuarios[i].imunizacao = 'incompleta';
+//         }
+//     }return usuarios
+// }
+// console.log(primeiraDoseDesafio())
+
+
+// const segundaDoseDesafio = (nomeDoUsuario) => {
+//     let resultado = usuarios.map((item) => {
+// return item.nome === nomeDoUsuario ? {...item ,imunizacao: "Completo"} : item
+//     })
+//     return resultado
+// }
+
+// console.log(segundaDoseDesafio('Artur'));
+// const usuarios = [
+//     {
+//         nome: "Artur",
+//         ano: 2000,
+//         nacionalidae: "brasileiro",
+//         senha: "123456",
+//         vacina: "pfizer",
+//         imunizacao: "incompleta"
+//     },
+//     {
+//         nome: "Bárbara",
+//         ano: 1984,
+//         nacionalidae: "brasileira",
+//         senha: "labenu",
+//         vacina: "astrazenica",
+//         imunizacao: "completa"
+//     },
+//     {
+//         nome: "Carlos",
+//         ano: 2000,
+//         nacionalidae: "brasileiro",
+//         senha: "123456",
+//         vacina: "coronavac",
+//         imunizacao: "incompleta"
+//     }
+
+// ]
+// const avisoAosAtrasadosDesafio = () => {
+// usuarios.map((item) =>{
+//     if(item.imunizacao === "incompleto"){
+//         console.log(`Olá ${item.nome}! A imunização está ${item.imunizacao}, quando puder volte ao posto para mais uma dose!!!`)
+//     }
+// })
+// }
+
+// console.log(avisoAosAtrasadosDesafio())
+

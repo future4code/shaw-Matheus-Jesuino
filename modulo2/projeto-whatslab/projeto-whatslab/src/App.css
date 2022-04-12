@@ -1,0 +1,23 @@
+
+h1 {
+  text-align: center;
+}
+.caixa {
+padding: 10px;
+  border-bottom:2px solid black ;
+  margin-top: 507px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+ height: 30px;
+}
+button {
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.text1 {
+  margin: 5px;
+padding: 5px;
+}
