@@ -50,9 +50,7 @@ font-size: 21px;
 align-items:center;
 `
 
-const App = () => {
-
-  
+const App = () => {  
     return (
       <div>
         <Astro>AstroMatch</Astro>
