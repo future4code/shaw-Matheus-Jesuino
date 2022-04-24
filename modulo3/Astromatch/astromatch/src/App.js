@@ -1,6 +1,7 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import TelaMatch from './components/TelaMatch'
 
 
 
@@ -104,11 +105,24 @@ margin-right: 0px;
 `
 const App = () => {
   const [perfil, setPerfil] = useState({})
+  const [page, setPage] = useState("Home")
 
 
   useEffect(() => {
     getProfileToChoose();
   }, []);
+
+  const TrocaPages = () => {
+    switch (page) {
+      case "Home":
+        return <App />
+      case "MeusMatches":
+        return <TelaMatch />
+      default:
+        return <App />
+    }
+  }
+
   const getProfileToChoose = () => {
     axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/Matheus-Jesuino-Shaw/person")
       .then((res) => {
@@ -127,19 +141,21 @@ const App = () => {
 
   return (
     <div>
-      <Astro>AstroMatch</Astro>
-      {console.log(perfil)}
-      <Container>
-        <Imagem src={perfil.photo} />
-        <Nome> {perfil.name}</Nome>
-        <Bio> {perfil.bio}</Bio>
-        <Idade> {perfil.age} anos</Idade>
-        <Botoes>
-          <Botãox onClick={() => postChoosePerson(perfil.id, false)}>&Chi;</Botãox>
-          <BotãoCoração onClick={() => postChoosePerson(perfil.id, true)} >&#10084;</BotãoCoração>
-          <MeusMatch>&rarr;</MeusMatch>
-        </Botoes>
-      </Container>
+      <div>
+        <Astro>AstroMatch</Astro>
+        {console.log(perfil)}
+        <Container>
+          <Imagem src={perfil.photo} />
+          <Nome> {perfil.name}</Nome>
+          <Bio> {perfil.bio}</Bio>
+          <Idade> {perfil.age} anos</Idade>
+          <Botoes>
+            <Botãox onClick={() => postChoosePerson(perfil.id, false)}>&Chi;</Botãox>
+            <BotãoCoração onClick={() => postChoosePerson(perfil.id, true)} >&#10084;</BotãoCoração>
+            <MeusMatch onClick={() => TrocaPages("MeusMatches")}>&rarr;</MeusMatch>
+          </Botoes>
+        </Container>
+      </div>
     </div>
   )
 }
