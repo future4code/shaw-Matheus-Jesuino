@@ -1,18 +1,10 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import HomePage from "../Pages/HomePage";
-import ListTripsPage from "../Pages/ListTripsPage";
-import AdminHomePage from "../Pages/AdminHomePage";
-import CreateTripPage from "../Pages/CreateTripPage";
-import LoginPage from "../Pages/LoginPage"
-import TripDetailsPage from "../Pages/TripDetailsPage"
+import { useNavigate } from "react-router-dom";
+import {goToBack} from "../Coordinator/Coordinator"
 
 function ApplicationFormPage() {
     const navigate = useNavigate()
 
-const goToHomePage = () => {
-    navigate("/viagens")
-}
 
 
 return (
@@ -23,7 +15,7 @@ return (
         <input type="text" placeholder="Texto de Candidatura"/>
         <input type="text" placeholder="Profissão"/>
         <input type="select" placeholder="Escolha seu Pais"/>
-<button onClick={goToHomePage}>Voltar</button>
+<button onClick= {()=>goToBack(navigate)}>Voltar</button>
   <button>Enviar</button>
  
   </div>
