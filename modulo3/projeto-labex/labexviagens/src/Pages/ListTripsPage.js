@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { goToApplicationFormPage, goToHomePage } from "../Coordinator/Coordinator";
-import { BASE_URL } from "../Constants/constants"
+import { BASE_URL } from "../Constants/constants";
 import axios from "axios";
 
 
@@ -24,15 +24,16 @@ function ListTripsPage() {
                 alert(err.data.trips)
             })
     }
-    const getList = getTrips.map((trip) => {
-        return (
-            <div key={trip.id} >
-                <li>Viagem: {trip.planet}</li>
-                <li>Atração: {trip.name}</li>
-                <li>Descrição: {trip.description}</li>
-            </div>
-        )
-    })
+ const getList = getTrips.map((trip)=>{
+return(
+    <div key={trip.id} >
+        <li>Viagem: {trip.planet}</li>
+        <li>Atração: {trip.name}</li>
+        <li>Descrição: {trip.description}</li>
+    </div>
+)
+ })
+
 
     return (
         <div>
@@ -40,7 +41,7 @@ function ListTripsPage() {
             <button onClick={() => goToApplicationFormPage(navigate)} >Inscrever-sa</button>
             <h1>Lista de Viagens</h1>
             {getList}
-        </div>
+            </div>
     )
 }
 
