@@ -34,7 +34,7 @@ const ApplicationFormPage = () => {
         axios
             .post(`${BASE_URL}trips/${id}/apply`, body)
             .then(res => {
-                setPostApply(res.data.apply)
+                setPostApply(res.data.postApply)
                 console.log(res.data);
             })
             .catch((err) => {
@@ -86,7 +86,6 @@ const ApplicationFormPage = () => {
             })
     }
 
-
     return (
         <div>
             <h1>Inscreva-se para uma viagem</h1>
@@ -95,10 +94,10 @@ const ApplicationFormPage = () => {
                     {getTripsName}
                 </select>
                 <div>
-                    <input onChange={onChangeNome} placeholder="Nome"></input>
-                    <input onChange={onChangeIdade} placeholder="Idade" type="number"></input>
-                    <input onChange={onChangeCandidatura} placeholder="Texto de Candidatura"></input>
-                    <input onChange={onChangeProfissao} placeholder="Profissão"></input>
+                    <input onChange={onChangeNome} placeholder="Nome"value={name}></input>
+                    <input onChange={onChangeIdade} placeholder="Idade" type="number" value={age}></input>
+                    <input onChange={onChangeCandidatura} placeholder="Texto de Candidatura" value={applicationText}></input>
+                    <input onChange={onChangeProfissao} placeholder="Profissão" value={profession}></input>
                 </div>
                 <div>
                     <select name="paises" id="paises" onChange={onChangeCountry}>
