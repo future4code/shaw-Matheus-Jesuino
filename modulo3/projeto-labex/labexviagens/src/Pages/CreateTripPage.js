@@ -5,7 +5,6 @@ import {goToAdminHomePage,} from "../Coordinator/Coordinator"
 
 function CreateTripPage() {
     const navigate = useNavigate()
-
    
     useProtectedPage()
     return (
