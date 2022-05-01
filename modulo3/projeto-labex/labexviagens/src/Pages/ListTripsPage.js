@@ -35,7 +35,6 @@ return(
 )
  })
 
-
     return (
         <div>
             <button onClick={() => goToHomePage(navigate)}>Voltar</button>
