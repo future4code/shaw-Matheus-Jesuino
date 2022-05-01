@@ -3,7 +3,6 @@ import {useNavigate } from "react-router-dom";
 import useProtectedPage from "../Hooks/useProtectedPage"
 import {goToAdminHomePage,} from "../Coordinator/Coordinator"
 
-
 function CreateTripPage() {
     const navigate = useNavigate()
        
