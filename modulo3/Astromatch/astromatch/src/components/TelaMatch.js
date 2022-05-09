@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import axios from "axios";
+import MatchList from "./MatchList"
+import { useState, useEffect } from "react";
 
 const ContainerTela = styled.div`
 width: 500px;
@@ -13,16 +15,29 @@ margin: auto;
 margin-top: 20px;
 `
 
-
-
-
-const TelaMatch = () => {
-    
-      return (
+function TelaMatch() {
+   const [matches, setMatches] = useState([]);
+ 
+   useEffect(() => {
+     axios
+       .get(
+         "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/mazzi/matches"
+       )
+       .then((res) => {
+         console.log(res.data.matches);
+         setMatches(res.data.matches);
+       });
+   }, []);
+ 
+   return (
      <div>
-        Olá fkmgkmhjgknhgfkjngf 
+       {matches.map((profile) => {
+         return <MatchList profile={profile} />;
+       })}
      </div>
-      )
-    }
-  
-    export default TelaMatch;
+   );
+ }
+ 
+ export default TelaMatch;
+ 
+
