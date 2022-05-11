@@ -1,13 +1,14 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
-import {useNavigate } from "react-router-dom";
+import {useNavigate  } from "react-router-dom";
 import {goToFeed, goToLogin} from "../Routes/Coordinator"
+import useProtectedPage from "../Hooks/useProtectedPage";
 
 
 export const Post = () => {
     const navigate = useNavigate()
-
+    useProtectedPage()
 
 
     return (

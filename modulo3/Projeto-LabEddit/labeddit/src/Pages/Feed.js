@@ -3,11 +3,14 @@ import axios from "axios";
 import styled from "styled-components";
 import {useNavigate } from "react-router-dom";
 import {goToCadastro, goToLogin, goToPost} from "../Routes/Coordinator"
+import useProtectedPage from "../Hooks/useProtectedPage";
+
 
 
 export const Feed = () => {
     const navigate = useNavigate()
-
+    useProtectedPage()
+    
 
 
     return (
