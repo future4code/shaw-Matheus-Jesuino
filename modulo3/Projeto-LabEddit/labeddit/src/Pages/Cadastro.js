@@ -10,7 +10,7 @@ import useUnProtectedPage from "../Hooks/useUnProtectedPage";
 
 export const Cadastro = () => {
     useUnProtectedPage()
-    
+
     const navigate = useNavigate()
     const [form, inputChange, clear] = useForm({ username: "", email: "", password: "" });
 
@@ -19,33 +19,33 @@ export const Cadastro = () => {
         event.preventDefault();
         Cadastrar()
     }
-    
+
 
     const Cadastrar = () => {
         axios
-        .post(`${BASE_URL}/users/signup`, form)
-        .then((res) => {
-            localStorage.setItem("token", res.data.token)
-            clear();
-        })
-        .catch((err) => {
-            alert("Usúario não encontardo")
-            clear();
-        })
-}
+            .post(`${BASE_URL}/users/signup`, form)
+            .then((res) => {
+                localStorage.setItem("token", res.data.token)
+                clear();
+            })
+            .catch((err) => {
+                alert("Usúario não encontardo")
+                clear();
+            })
+    }
     return (
         <div>
 
 
             <form onSubmit={onSubmitForm}>
                 <h1>Cadastre-se</h1>
-                <input 
+                <input
                     placeholder="Usúario"
                     name={"Nome de Usúario"}
                     value={form.username}
                     onChange={inputChange}
-                   
-                />
+                    required 
+                    />
                 <input type={"email"}
                     placeholder="Email"
                     name={"email"}
