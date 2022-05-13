@@ -51,7 +51,7 @@ export const Login = () => {
                     required
                 />
                 <button type={"submit"}>Entrar</button>
-                <button onClick={() => goToCadastro(navigate)}>Cadastre-se</button>
+                <button onClick={() => goToCadastro(navigate)}>Cadastrar</button>
             </form>
 
 

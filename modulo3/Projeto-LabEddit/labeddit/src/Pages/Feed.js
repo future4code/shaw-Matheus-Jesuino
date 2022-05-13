@@ -7,6 +7,7 @@ import useProtectedPage from "../Hooks/useProtectedPage";
 import { BASE_URL } from "../Constants/Contants";
 import useRequestData from "../Hooks/useRequestData";
 import { useParams } from "react-router-dom";
+import useForm from "../Hooks/useForm";
 
 
 const Postagens = styled.div`
@@ -24,31 +25,75 @@ export const Feed = () => {
     useProtectedPage()
     const navigate = useNavigate()
     const recipes = useRequestData([], `${BASE_URL}/posts`)
-   
+    const [form, inputChange, clear] = useForm({ title: "", body: "" })
+
+
     const onClickPost = (id) => {
         goToDetalhePost(navigate, id)
     }
 
+    const criarPost = () => {
+
+        axios
+            .post(`${BASE_URL}/posts`, form, {
+                headers: {
+                    Authorization: localStorage.getItem("token")
+                }
+            })
+            .then((res) =>{
+                alert(res.data)
+                clear()
+            })
+
+            .catch((err) => {
+                alert(err.data)
+                clear()
+            })
+
+
+    }
+    const submitForm = (event) => {
+        event.preventDefault()
+        criarPost()
+    }
+
+
     const recipesFeed = recipes.map((recipe) => {
         return (
-            <Postagens onClick ={()=> onClickPost(recipe.id) }>
+            <Postagens onClick={() => onClickPost(recipe.id)}>
                 <p>{recipe.username}</p>
                 <p>{recipe.title}</p>
                 <p>{recipe.body}</p>
-                
             </Postagens>
         )
     })
 
     return (
-        <div>
+        <form onSubmit={submitForm}>
             <h1>Feed</h1>
             <button onClick={() => goToLogin(navigate)}>Sair</button>
-            <button onClick={() => goToCadastro(navigate)}>Cadastre-se</button><br/><br/><br/><br/>
-            <CriarPost type={"text"} placeholder="Adicionar Post..."/>
-            <button >Postar</button><br/><br/>               
+            <button onClick={() => goToCadastro(navigate)}>Cadastre-se</button><br /><br /><br /><br />
+
+            <CriarPost
+                name={"title"}
+                value={form.title}
+                onChange={inputChange}
+                type={"text"}
+                required
+                placeholder="Título do Post" />
+            <CriarPost
+                name={"body"}
+                value={form.body}
+                type={"text"}
+                onChange={inputChange}
+                required
+                placeholder="Adicionar Post..." />
+            <button >Postar</button><br /><br />
+
+
             {recipesFeed}
-        </div>
+        </form>
+
     );
 }
 
