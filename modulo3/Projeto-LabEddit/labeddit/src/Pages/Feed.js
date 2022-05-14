@@ -71,7 +71,7 @@ export const Feed = () => {
     return (
         <form onSubmit={submitForm}>
             <h1>Feed</h1>
-            <button onClick={() => goToLogin(navigate)}>Sair</button>
+            <button type={"submit"}>Sair</button>
             <button onClick={() => goToCadastro(navigate)}>Cadastre-se</button><br /><br /><br /><br />
 
             <CriarPost

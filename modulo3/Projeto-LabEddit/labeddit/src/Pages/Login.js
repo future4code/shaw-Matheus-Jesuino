@@ -16,7 +16,7 @@ export const Login = () => {
 
     const onSubmitForm = (event) => {
         event.preventDefault();
-        login()
+        login(navigate)
     }
 
     const login = () => {
@@ -50,8 +50,8 @@ export const Login = () => {
                     onChange={inputChange}
                     required
                 />
-                <button type={"submit"}>Entrar</button>
-                <button onClick={() => goToCadastro(navigate)}>Cadastrar</button>
+                <button type={"submit"} >Cadastrar</button>
+                <button onClick={() => goToFeed(navigate)}>Entrar</button>
             </form>
 
 

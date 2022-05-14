@@ -12,7 +12,7 @@ export const Cadastro = () => {
     useUnProtectedPage()
 
     const navigate = useNavigate()
-    const [form, inputChange, clear] = useForm({ username: "", email: "", password: "" });
+    const [form, inputChange, clear] = useForm({ username: "", email: "", password: "" })
 
 
     const onSubmitForm = (event) => {
@@ -40,10 +40,12 @@ export const Cadastro = () => {
             <form onSubmit={onSubmitForm}>
                 <h1>Cadastre-se</h1>
                 <input
+                type={"text"}
                     placeholder="Usúario"
                     name={"Nome de Usúario"}
                     value={form.username}
                     onChange={inputChange}
+                    label={"username"}
                     required 
                     />
                 <input type={"email"}
