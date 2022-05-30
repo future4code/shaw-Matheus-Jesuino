@@ -2,9 +2,9 @@
 // JavaScript:
 
 
-function obterEstatisticas(numeros:any[]) {
+function obterEstatisticas(numeros:number[]) : Estatisticas {
 
-    const numerosOrdenados = numeros.sort(
+    const numerosOrdenados :number[] = numeros.sort(
         (a, b) => a - b
     )
 
@@ -13,8 +13,7 @@ function obterEstatisticas(numeros:any[]) {
     for (let num of numeros) {
         soma += num
     }
-
-    const estatisticas = {
+    const estatisticas : Estatisticas ={
         maior: numerosOrdenados[numeros.length - 1],
         menor: numerosOrdenados[0],
         media: soma / numeros.length
@@ -24,13 +23,15 @@ function obterEstatisticas(numeros:any[]) {
 }
 
 
-console.log([5,10,15,20]);
+type Estatisticas = {
+    maior: number,
+    menor: number,
+    media: number
+}
 
-type amostra = {
-
-    numeros: [21, 18, 65, 44, 15, 18],
-
-    obterEstatisticas: (numeros:any) => {}
+type AmostraDeIdades = {
+    numeros: number[],
+    obterEstatisticas: (numeros:number[])=> Estatisticas
 }
 
 
