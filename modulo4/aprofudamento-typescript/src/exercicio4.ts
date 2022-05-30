@@ -12,6 +12,7 @@
 
 // b) Como você faria, já com a extensão instalada, para transpilar(converter) esse arquivo
 //  typescript em um arquivo javascript?
+// tsc exercicio4.ts 
 
 type pokemon = {
 	name: string,
@@ -40,6 +41,8 @@ const pokemon3: pokemon = {
 
 // b) E se este arquivo estivesse dentro de uma pasta chamada `src`. 
 // O processo seria diferente? Se sim, descreva as diferenças.
+// tsc src/exercicio4.ts 
 
 // c) Existe alguma maneira de **transpilar** múltilplos arquivos de uma vez só?
 //  Caso conheça, explique como fazer.
+// tsc exercicio1.ts exercicio2.ts exercicio3.ts
