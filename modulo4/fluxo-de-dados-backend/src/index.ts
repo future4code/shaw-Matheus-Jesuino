@@ -1,4 +1,4 @@
-console.log("Hello, Word");
+console.log("Hello, Word")
 
 // import express from "express";
 // import cors from "cors";
