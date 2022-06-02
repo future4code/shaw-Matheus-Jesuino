@@ -5,7 +5,6 @@ import {goToHomePage} from "../Coordinator/Coordinator"
 function LoginPage() {
     const navigate = useNavigate()
 
-
 return (
     <div>
         <input placeholder="E-mail"/>

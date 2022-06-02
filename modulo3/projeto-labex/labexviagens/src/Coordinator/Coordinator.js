@@ -23,3 +23,5 @@ export const goToListTripsPage = (navigate) => {
 export const goToApplicationFormPage = (navigate) => {
     navigate("/formulario")
 }
+
+

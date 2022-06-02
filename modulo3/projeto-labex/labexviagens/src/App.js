@@ -5,7 +5,6 @@ import HomePage from "./Pages/HomePage";
 import ListTripsPage from "./Pages/ListTripsPage";
 import { Router } from "./Routes/Router";
 
-
 function App() {
 
   return (

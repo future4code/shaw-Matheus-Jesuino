@@ -5,11 +5,8 @@ import {useNavigate } from "react-router-dom";
 
 import {goToAdminHomePage,goToListTripsPage,} from "../Coordinator/Coordinator"
 
-
 export const HomePage = () => {
     const navigate = useNavigate()
-
-
 
     return (
         <div>

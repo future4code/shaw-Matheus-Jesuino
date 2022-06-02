@@ -24,6 +24,7 @@ function ListTripsPage() {
                 alert(err.data.trips)
             })
     }
+    
  const getList = getTrips.map((trip)=>{
 return(
     <div key={trip.id} >
@@ -33,7 +34,6 @@ return(
     </div>
 )
  })
-
 
     return (
         <div>
