@@ -10,7 +10,6 @@ import TripDetailsPage from "../Pages/TripDetailsPage"
 
 export const Router = () => {
 
-
     return (
         <div>
     <BrowserRouter>

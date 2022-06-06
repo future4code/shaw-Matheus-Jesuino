@@ -6,8 +6,6 @@ import {goToCreateTripPage,goToHomePage,goToLoginPage} from "../Coordinator/Coor
 function AdminHomePage() {
     const navigate = useNavigate()
 
-
-
 return (
     <div>
 <button onClick= {()=>goToHomePage(navigate)}>Voltar</button>

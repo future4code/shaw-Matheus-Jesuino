@@ -22,7 +22,6 @@ const ApplicationFormPage = () => {
     }, [])
 
     const postApplys = () => {
-
         const body = {
             name: name,
             age: age,
