@@ -7,6 +7,8 @@ CREATE TABLE Actor (
 );
 
 *a) Nesta tabela, utilizamos o `FLOAT` para declarar o salário, porque esta é uma forma de representar um número não inteiro em uma tabela. Explique os demais comandos que estão nessa query.*
+varchar(255) = 
+DATA = 
 
 *b) O comando `SHOW` é bem útil para nos prover informações sobre bancos, tabelas, e mais. Utilize os comandos: `SHOW DATABASES` e `SHOW TABLES`. Explique os resultados.*
 
@@ -18,7 +20,7 @@ VALUES(
   "001", 
   "Tony Ramos",
   400000,
-  "1948-08-25", 
+  "1948-08-25",
   "male"
 );
 Atente-se a 3 fatos nessa query:
