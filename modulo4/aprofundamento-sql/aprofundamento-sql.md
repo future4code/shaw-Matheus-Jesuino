@@ -126,7 +126,6 @@ ALTER TABLE Movie ADD playing_limit_date DATE;
 b) *Altere a tabela de `Movie` para que o parâmetro `rating` possa aceitar valores não inteiros, como, por exemplo, uma avaliação `8.5`.*
 
 ALTER TABLE Movie CHANGE rating rating FLOAT;
-
 c) *Atualize dois filmes de tal forma que tenhamos um que ainda esteja em cartaz e um que já tenha saído*
 
 UPDATE Movie
