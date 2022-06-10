@@ -116,7 +116,6 @@ VALUES(
     "003"
 );
 
-
 *c) Tente criar uma relação com um filme ou um ator inexistente. Anote e explique o resultado da query*
 
 Dá erro e diz que atores ou filmes não existem.
