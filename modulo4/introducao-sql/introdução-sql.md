@@ -86,7 +86,7 @@ SELECT id, name, salary from Actor WHERE salary < 500000;
 ```
 
 ## Exercício 3-e
-> Error Code: 1054. Unknown column 'nome' in 'field list'
+
 
 O nome da coluna 'nome' não existe, porque na criação da tabela foi utilizado 'name'.
 
