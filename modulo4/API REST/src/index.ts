@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import express, { Request, Response } from 'express'
+=======
 import express from 'express'
+>>>>>>> master
 import cors from 'cors'
 
 type User = {
@@ -59,6 +63,12 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+<<<<<<< HEAD
+// Para testar se o servidor está tratando os endpoints corretamente
+app.get("/ping", (req: Request, res: Response) => {
+  res.status(200).send("pong!")
+})
+=======
 // Exercicio 1
 app.get("/users", (req, res) => {
   res.status(200).send(users)
@@ -71,6 +81,7 @@ app.get("/users", (req, res) => {
 // Exercicio 2 
 
 app.get("/")
+>>>>>>> master
 
 app.listen(3003, () => {
   console.log('Server is running at port 3003')
