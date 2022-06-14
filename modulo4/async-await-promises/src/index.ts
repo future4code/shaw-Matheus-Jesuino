@@ -23,19 +23,7 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors());
 
-// async function getSubscribers(): Promise<any[]> {
-//     const response = await axios.get(`${base_url}/subscribers`);
-//     return response.data;
-//   };
  
-  const getSubscribers = () => {
-    return axios
-    .get(`${base_url}/subscribers`)
-    .then(res =>res.data)
-  }
-  getSubscribers()
-  .then(getSubscribers)
-  .catch(erro => erro.response.data)
 
 
 const server = app.listen(process.env.PORT || 3003, () => {

@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   
+    "ex1":"ts-node-dev ./src/ex1.ts",
+    "ex2":"ts-node-dev ./src/ex2.ts",
+    "ex3":"ts-node-dev ./src/ex3.ts",
+    "ex4":"ts-node-dev ./src/ex4.ts",
+    "ex5":"ts-node-dev ./src/ex5.ts",
+    "ex6":"ts-node-dev ./src/ex6.ts",
 		"dev": "ts-node-dev ./src/index.ts",
     "start": "node ./build/index.js",
     "build": "tsc" ,
